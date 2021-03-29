@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>T_shirt</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body >
+	<div class="container">
+	<h5><b>Get Your T_Shirt Size(Gents Only)</b></h5>
+	<form action="{% url 'predict' %}" method="POST">
+		{% csrf_token %}
+		<div class="form-group">
+	      <label for="uname"><b>Height[C.M]</b></label>
+	      <p><input type="text" class="form-control" id="name" placeholder="Enter Your Height in c.m" name="height" required></p>
+    	</div>
+    	<div class="form-group">
+	      <label for="uname"><b>Weight[K.G]</b></label>
+	      <p><input type="text" class="form-control" id="name" placeholder="Enter Your weight in kgs" name="weight" required></p>
+    	</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+	</div>
+	<div align="right">
+          <h5 ><b>Designed and  Developed By</b></h2>
+          <h5 class="header"> <b>-vijay kumar</b></h5>
+      </div>
+</body>
+</html>
